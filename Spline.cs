@@ -7,7 +7,6 @@ using UnityEngine;
 /// ---------------------
 /// In this regard, Spline Interpolation uses Polynomials to Oscillate between Various Points; to ensure a Smooth Gameplay Experience to any Framework
 ///<summary>
- 
 namespace hazza.Splines
 {
 	public class Spline : MonoBehaviour
