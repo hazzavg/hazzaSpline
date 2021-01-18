@@ -2,11 +2,12 @@
 using UnityEngine;
 
 ///<summary>
-/// This Script determine the Various Associations of the Spline Interpolation
+/// This Script determines the Various Associations of the Spline Interpolation
 /// by accessing Variables from other Scripts to carry out the Interpolation
 /// ---------------------
 /// In this regard, Spline Interpolation uses Polynomials to Oscillate between Various Points; to ensure a Smooth Gameplay Experience to any Framework
 ///<summary>
+
 namespace hazza.Splines
 {
 	public class Spline : MonoBehaviour
