@@ -1,6 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
+///<summary>
+/// This Script determines the Various Interpretation Points
+///<summary>
 namespace hazza.Splines
 {
 	[Serializable]
