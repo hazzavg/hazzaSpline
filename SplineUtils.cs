@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+///<summary>
+/// This Script access the Utilities used in Spline Interpolation
+///<summary>
 namespace hazza.Splines
 {
 	public static class SplineUtils
