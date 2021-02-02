@@ -16,7 +16,7 @@ namespace hazza.Splines
 		{
 			get
 			{
-				return (this.points.Length - 1) / 3; 
+				return (this.points.Length - 1) / 3; // Access the Points Array to determine how many Points are in the Curve
 			}
 		}
 
@@ -24,11 +24,11 @@ namespace hazza.Splines
 		{
 			get
 			{
-				return this.points.Length; 
+				return this.points.Length; // Access the Points Array to determine how many Control Point there are
 			}
 		}
 
-		public bool Closed
+		public bool Closed // When the Spline is Closed, return all subsequent Values to 0
 		{
 			get
 			{
@@ -39,7 +39,7 @@ namespace hazza.Splines
 				this.closed = value;
 				if (value)
 				{
-					this.points[this.points.Length - 1].point = this.points[0].point;
+					this.points[this.points.Length - 1].point = this.points[0].point; 
 					this.points[this.points.Length - 1].normal = this.points[0].normal;
 					Array.Resize<TangentMode>(ref this.tangentModes, this.CurveCount);
 					this.tangentModes[this.tangentModes.Length - 1] = TangentMode.Aligned;
