@@ -40,13 +40,13 @@ namespace hazza.Splines
 				if (value)
 				{
 					this.points[this.points.Length - 1].point = this.points[0].point; // Return the Points Value to 0
-					this.points[this.points.Length - 1].normal = this.points[0].normal;
-					Array.Resize<TangentMode>(ref this.tangentModes, this.CurveCount);
-					this.tangentModes[this.tangentModes.Length - 1] = TangentMode.Aligned;
+					this.points[this.points.Length - 1].normal = this.points[0].normal; // Return the Normal Value of the Spline Point to 0
+					Array.Resize<TangentMode>(ref this.tangentModes, this.CurveCount); // Reference the Enum for Tangential Modes and Motions
+					this.tangentModes[this.tangentModes.Length - 1] = TangentMode.Aligned; 
 					return;
 				}
-				Array.Resize<TangentMode>(ref this.tangentModes, this.CurveCount - 1); 
-				this.RemoveLastCurve(); 
+				Array.Resize<TangentMode>(ref this.tangentModes, this.CurveCount - 1); // Resize the Array when the Curve Count is less than 1
+				this.RemoveLastCurve(); // Remove the Last Curve when the Curve Count is less than 1
 			}
 		}
 
