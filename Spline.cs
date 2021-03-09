@@ -41,25 +41,25 @@ namespace hazza.Splines
 				{
 					this.points[this.points.Length - 1].point = this.points[0].point; // Return the Points Value to 0
 					this.points[this.points.Length - 1].normal = this.points[0].normal; // Return the Normal Value of the Spline Point to 0
-					Array.Resize<TangentMode>(ref this.tangentModes, this.CurveCount); // Reference the Enum for Tangential Modes and Motions
+					Array.Resize<TangentMode>(ref this.tangentModes, this.CurveCount); // Reference the Enum
 					this.tangentModes[this.tangentModes.Length - 1] = TangentMode.Aligned; 
 					return;
 				}
-				Array.Resize<TangentMode>(ref this.tangentModes, this.CurveCount - 1); // Resize the Array when the Curve Count is less than 1
-				this.RemoveLastCurve(); // Remove the Last Curve when the Curve Count is less than 1
+				Array.Resize<TangentMode>(ref this.tangentModes, this.CurveCount - 1); 
+				this.RemoveLastCurve(); 
 			}
 		}
 
 		public void Reset()
 		{
-			this.points = new SplinePoint[]
+			this.points = new SplinePoint[] // Creates a New Array that determines how many Points the Spline will have
 			{
 				new SplinePoint(Vector3.forward * 1f, Vector3.up),
 				new SplinePoint(Vector3.forward * 2f, Vector3.up),
 				new SplinePoint(Vector3.forward * 3f, Vector3.up),
 				new SplinePoint(Vector3.forward * 4f, Vector3.up)
 			};
-			this.tangentModes = new TangentMode[0];
+			this.tangentModes = new TangentMode[0]; // When the Enum is Null; not being used unless specified otherwise
 		}
 
 		public Vector3 GetPoint(float t)
