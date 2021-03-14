@@ -45,8 +45,8 @@ namespace hazza.Splines
 					this.tangentModes[this.tangentModes.Length - 1] = TangentMode.Aligned; 
 					return;
 				}
-				Array.Resize<TangentMode>(ref this.tangentModes, this.CurveCount - 1); 
-				this.RemoveLastCurve(); 
+				Array.Resize<TangentMode>(ref this.tangentModes, this.CurveCount - 1); // Resize the Array when the Curve Count is less than 1 (when the Enum isn't used for Interpolation)
+				this.RemoveLastCurve(); // Subsequently, remove the Last Curve when the Enum isn't being used for that Curve
 			}
 		}
 
