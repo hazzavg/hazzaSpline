@@ -25,7 +25,7 @@ namespace hazza.Splines
 			this.bitangent = Vector3.Cross(normal, direction);
 		}
 
-		public Vector3 point; // The Positionf of Each Point
+		public Vector3 point; // The Position of of Each Point
 		public Vector3 normal; // The Normal Position of each Point
 		public Vector3 direction; // The Direction of Each Point
 		public Vector3 bitangent; // The Line of which that goes through 2 Spline Points
